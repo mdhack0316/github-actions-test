@@ -2,7 +2,7 @@ name: First Testing Github Action workflow YAML
 
 
 on: 
-    #push: 
+    push: 
     workflow_dispatch: 
 
 jobs: 
@@ -10,7 +10,10 @@ jobs:
         name: Printing 
         runs-on: ubuntu-latest
         steps:
+        - name: Using Action so they can read repo file
+          uses: actions/checkout@v4
         - name: Printing Files
           run: echo ls
         - name: Listing Files
-          run: ls
+          run: |
+              echo "Welcome To Github ACtions"
