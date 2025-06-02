@@ -1,0 +1,16 @@
+name: First Testing Github Action workflow YAML
+
+
+on: 
+    #push: 
+    workflow_dispatch: 
+
+jobs: 
+    testing: 
+        name: Printing 
+        runs-on: ubuntu-latest
+        steps:
+        - name: Printing Files
+          run: echo ls
+        - name: Listing Files
+          run: ls
